@@ -18,9 +18,11 @@ const createScrollProgress = () => {
 // Navbar Scroll Effect
 const navbarScrollEffect = () => {
     const navbar = document.querySelector('.navbar');
+    const hero = document.querySelector('.hero');
+    const heroHeight = hero ? hero.offsetHeight : 600;
     
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
+        if (window.pageYOffset > heroHeight - 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
